@@ -12,7 +12,9 @@
         <a href="{% url 'rango:index'  %}">Return to the homepage.</a><br />
     {% else %}
         Rango says: <strong>register here!</strong><br />
-        <form id="user_form" methods="post" action="{% url 'rango:register' %}" enctype="multipart/form-data">
+        <form id="user_form" method="post" action="{% url 'rango:register' %}" enctype="multipart/form-data">
+        <!--bug!!!"method*s*"-->    
+                
             {% csrf_token %}
             
             <!-- form display -->
@@ -24,3 +26,7 @@
         </form>
     {% endif %}
 {% endblock %}
+
+
+
+
