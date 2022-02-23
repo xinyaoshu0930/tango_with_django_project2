@@ -34,6 +34,6 @@ class UserProfile(models.Model):
 
 	website = models.URLField(blank=True)
 	picture = models.ImageField(upload_to='profile_images', blank=True)
-
+	
 	def __str__(self):
 		return self.user.username
